@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>About tommy</title>
+  <title>tommy's Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
   <link id="css" rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
@@ -32,25 +32,19 @@
   <div class="content">
     <section class="left-content">
       <div class="section-content-wrapper">
-        <h1>About Me</h1>
+        <h1>Contact</h1>
         <div class="divider-line"></div>
-        <p class="non-header-text">
-          <img class="prof-pic" alt="profile picture" src="assets/images/me_200x283.jpg"> Woah, you made it to my page. Awesome! I'm Tommy.
-          <br><br>
-          I grew up in Chicago and its northern suburbs, and graduated from University of Wisconsin (Madison) in 2007.
-          Since then, I've worked predominately in healthcare IT. For nearly 6, I worked for Epic, 
-          an enterprise electronic medical vendor located in Verona, Wisconsin. Currently, I work at LabCorp,
-          a diversified clinical laboratory network, at its headquarters in Burlington, North Carolina, 
-          where I certify reverse reference interfaces.
-          <br><br>
-          Oh, I should let you know! Unfortunately, I'm not the bird-person depicted to the left. I just use that image
-          as an online avatar. It's just so cool, I can't help it!
-          <br><br>
-          (That's Hawk from the tv show "Buck Rogers in the 25th Century," by the way.
-          Fun show!)
-          <br><br>
-          
-        </p>
+        <form class="form non-header-text" enctype="text/plain" action="mailto:tommyn.gre@gmail.com" method="GET">
+          <input id="mailto-subject" name="Subject" type="hidden" value="Portfolio contact">
+          Name
+          <input class="non-header-text" name="Subject" type="text">
+          <br> Email Address
+          <input class="non-header-text" name="Subject" type="email">
+          <br> Message
+          <textarea class="non-header-text" name="Body"></textarea>
+          <br>
+          <input class="non-header-text" type="submit" value="send">
+        </form>
       </div>
     </section>
 
@@ -68,7 +62,7 @@
   </div>
 
   <footer class="non-header-text">&#169; 2018 by Tommy Greenfield
-    <span id="toggle">Click to switch stylesheets</span>
+      <span id="toggle">Click to switch stylesheets</span>
   </footer>
 
 </body>
