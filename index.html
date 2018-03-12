@@ -6,70 +6,115 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>About tommy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+
+  <!-- bootstrap resources -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
   <link id="css" rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="assets/scripts/main.js"></script>
-  <link rel="shortcut icon" href="assets/images/favicon.png" />
+
+  <!-- <script src="assets/scripts/main.js"></script> -->
+  <link rel="icon" href="assets/images/favicon.png" />
 </head>
 
 <body>
   <header>
-    <div class="content">
-      <span class="name-header header-text">tommy greenfield</span>
-      <span class="link">
-        <a class="non-header-text" href="contact.html">Contact</a>
-      </span>
-      <span class="link">
-        <a class="non-header-text border-right" href="portfolio.html">Portfolio</a>
-      </span>
-      <span class="link">
-        <a class="non-header-text border-right" href="index.html">About</a>
-      </span>
-    </div>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light ">
+
+      <a class="navbar-brand" href="#">
+        <span class="name-header">tommy greenfield</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="nav navbar-nav non-header-text">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">About
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
-  <div class="content">
-    <section class="left-content">
-      <div class="section-content-wrapper">
-        <h1>About Me</h1>
-        <div class="divider-line"></div>
-        <p class="non-header-text">
-          <img class="prof-pic" alt="profile picture" src="assets/images/me_200x283.jpg"> Woah, you made it to my page. Awesome! I'm Tommy.
-          <br><br>
-          I grew up in Chicago and its northern suburbs, and graduated from University of Wisconsin (Madison) in 2007.
-          Since then, I've worked predominately in healthcare IT. For nearly 6, I worked for Epic, 
-          an enterprise electronic medical vendor located in Verona, Wisconsin. Currently, I work at LabCorp,
-          a diversified clinical laboratory network, at its headquarters in Burlington, North Carolina, 
-          where I certify reverse reference interfaces.
-          <br><br>
-          Oh, I should let you know! Unfortunately, I'm not the bird-person depicted to the left. I just use that image
-          as an online avatar. It's just so cool, I can't help it!
-          <br><br>
-          (That's Hawk from the tv show "Buck Rogers in the 25th Century," by the way.
-          Fun show!)
-          <br><br>
-          
-        </p>
+<div class="container">
+  <div class="row content">
+    <section class="col-md-8 col-sm-12">
+      <div class="left-content">
+        <div class="section-content-wrapper">
+
+          <h1>About Me</h1>
+          <div class="divider-line"></div>
+
+          <div class="container-fluid">
+            <div class="row-fluid">
+              <img class="prof-pic col-sm-12 col-md-6" alt="profile picture" src="assets/images/hawk200x180.png">
+              <p class="non-header-text about-me">
+                Woah, you made it to my page! I'm Tommy.
+                <br>
+                <br> I grew up in Chicago and its northern suburbs, and graduated from University of Wisconsin (Madison) in 2007.
+                Since then, I've mostly worked in healthcare IT. For about 6 years, I worked for Epic, an enterprise
+                healthcare softare vendor in Verona, Wisconsin. Currently, I work at LabCorp, a clinical laboratory
+                network in Burlington, North Carolina, where I certify reverse reference interfaces.
+                <br>
+                <br> Oh, I should let you know! Unfortunately, I'm not the bird-person depicted to the left. I just use that
+                image as an online avatar. It's just so cool, I can't help it!
+                <br>
+                <br> (That's Hawk from the TV show "Buck Rogers in the 25th Century," by the way.)
+                <br>
+                <br>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="right-content">
-      <div class="section-content-wrapper">
-        <h1>Connect with Me</h1>
-        <div class="divider-line"></div>
-        <div class="social-media">
-          <a href="https://github.com/tommyngre/" target="_blank"><img class="icon" alt="github icon" src="assets/images/github.png"></a>
-          <a href="https://www.linkedin.com/in/tommygreenfield/" target="_blank"><img class="icon" alt="linkedin icon" src="assets/images/linkedin.png"></a>
-          <a href="https://stackoverflow.com/users/5612901/hawk" target="_blank"><img class="icon" alt="stackoverflow icon" src="assets/images/stackoverflow.png"></a>
+    <section class="col-md-4 col-sm-12">
+      <div class="right-content">
+        <div class="section-content-wrapper">
+          <h1>Connect with Me</h1>
+          <div class="divider-line"></div>
+          <div class="social-media">
+            <a href="https://github.com/tommyngre/" target="_blank">
+              <img class="icon" alt="github icon" src="assets/images/github.png">
+            </a>
+            <a href="https://www.linkedin.com/in/tommygreenfield/" target="_blank">
+              <img class="icon" alt="linkedin icon" src="assets/images/linkedin.png">
+            </a>
+            <a href="https://stackoverflow.com/users/5612901/hawk" target="_blank">
+              <img class="icon" alt="stackoverflow icon" src="assets/images/stackoverflow.png">
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </div>
+</div>
 
-  <footer class="non-header-text">&#169; 2018 by Tommy Greenfield
-    <span id="toggle">Click to switch stylesheets</span>
+  <footer class="non-header-text">
+    <div class="card">
+      <div class="card-header">
+        &#169; 2018 by Tommy Greenfield
+      </div>
+    </div>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
 </body>
 
