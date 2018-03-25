@@ -5,10 +5,11 @@ body{
   height: 100%;
 }
 
-/* .cont{
+#height{
   height:100%;
   position:relative;
-} */
+  padding-bottom:60px;
+}
 
 .navbar{
   padding: .3rem 1rem;
@@ -188,7 +189,7 @@ textarea {
 }
 
 #footer{
-  position:absolute;
+  position:fixed;
   width:100%;
   bottom:0;
 }
