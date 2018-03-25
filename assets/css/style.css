@@ -94,6 +94,9 @@ h1, .header-text{
 .proj-wrapper:hover{
   opacity:.7;
 }
+.proj-link:hover{
+  text-decoration:none;
+}
 .proj-name{
   /* position: absolute; */
   display:block;
