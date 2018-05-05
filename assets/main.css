@@ -1,0 +1,175 @@
+body{
+  height:100%;
+  font-family: 'Lato', 'Courier New', Courier, monospace;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 900;
+}
+
+b {
+  font-weight:700;
+}
+
+#hire-me{
+  font-weight:800;
+  color:black;
+}
+#hire-me:hover{
+  text-decoration: underline;
+}
+
+#sec{
+  font-family: 'Dosis', sans-serif;
+  font-style: normal;
+  display:inline-block;
+  font-weight: 400
+}
+
+#sec-title{
+  text-align:center;
+}
+
+p{
+  margin-top:0;
+  margin-bottom:0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+.cent{
+  display:table;
+  margin: 5px auto;
+}
+
+.load-section:hover{
+  transform: perspective(600) rotateY(-12deg);
+  -webkit-transform: perspective(600) rotateY(-12deg);
+  opacity: .9;
+}
+
+#icons{
+  margin:0 auto;
+}
+
+.icon{
+  font-size: .7em;
+}
+
+.icon-link{
+  color:black;
+}
+.icon-link:hover{
+  opacity:.7;
+}
+
+#loading-container{
+  position: relative;
+  margin-bottom:20px;
+}
+
+#loading-dialog{
+  display:none;
+  font-weight: 400;
+  margin-bottom:25px;
+}
+
+.load-section:hover{
+  cursor: pointer;
+}
+
+#signature{
+  font-size:.3em;
+  font-family: 'Dosis', sans-serif;
+  margin-top:25px;
+  font-weight:400;
+}
+
+.t-card{
+  background:white;
+  overflow:auto;
+  margin: 10px auto;
+  width:90%;
+}
+
+.t-card-title{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.row .t-card-pad{
+  margin-bottom:0px;
+}
+
+.t-card-pad{
+  padding:10px;
+}
+
+.proj-image-wrapper{
+  margin:0 auto;
+  width:100%;
+}
+
+.proj-pic{
+  height:200px;
+  margin:0 auto;
+  padding:10px;
+  border: 2px solid black;
+  border-radius:10px;
+}
+.proj-pic:hover{
+  transform: perspective(600) rotateY(-12deg);
+  -webkit-transform: perspective(600) rotateY(-12deg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.animatedFast {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.underline-link{
+  text-decoration: underline;
+}
+
+.sm-txt{
+  font-size: .7em;
+}
+
+ul:not(.browser-default)>li{
+  list-style: circle;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+ul{
+  margin:0 10px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+li{
+  display:list-item;
+  list-style-type: square;
+  margin-left: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+  .proj-image-wrapper{
+    margin-top:20px;
+  }
+  .t-card-desc{
+    text-align:center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .signature-sm{
+    display:none;
+  }
+  #sec-title{
+    background-color:skyblue;
+    text-align:center;
+  }
+}
