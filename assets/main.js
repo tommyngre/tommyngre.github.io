@@ -6,6 +6,12 @@ let portfolio = [
     image: './gallery/Trivia.png',
   },
   {
+    name: 'Ultimate Match Survey',
+    description: "A survey app built with node and express, which compares users' responses in order to find a 'match.'",
+    url: 'https://powerful-brushlands-13053.herokuapp.com',
+    image: './gallery/survey.png',
+  },
+  {
     name: 'Legendary One-Up',
     description: "A tongue-in-cheek 'fighting game' inspired by the oneupsmanship of co-workers.",
     url: 'https://tommyngre.github.io/week-4-game/',
