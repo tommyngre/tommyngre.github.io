@@ -140,7 +140,7 @@ function getSectionContent(section) {
         <li>Undergraduate at UW Madison</li>
         <li>5+ years as QA and <b>Technical Support Engineer</b> at <a class="underline-link" href="https://www.epic.com/" style="color:${assignRandomColor()}"><b>Epic</b></a>, a healthcare software vendor in Verona, Wisconsin</li>
         <li>Since Feb 2017, working as an <b>EDA Analyst</b> on at <a class="underline-link" href="https://www.labcorp.com/" style="color:${assignRandomColor()}"><b>LabCorp</b></a>, a clinical laboratory network headquartered in Burlington, North Carolina</li>
-        <li>Since Feb 2018, enrolled in a 24 week <b>full stack web dev</b> program through Trilogy Education Services and UNC Chapel Hill
+        <li>Feb-Aug 2018, 24 week <b>full stack web dev</b> program through Trilogy Education Services and UNC Chapel Hill
       </ul> 
       `
       return html;
