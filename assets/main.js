@@ -139,7 +139,7 @@ $(document).on('click', '#show-epic-details', function () {
     $('#show-epic-details').text("( more )")
     setTimeout(function () {
       $('#epic-details').css('display', 'none')
-    }, 850)
+    }, 540)
   }
 })
 
