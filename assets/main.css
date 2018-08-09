@@ -1,3 +1,27 @@
+
+#tommy{
+  text-align: center;
+  display:block;
+}
+
+#show-epic-details{
+  font-size: .7em;
+}
+
+#epic-details{
+  display: none;
+  width: 80%;
+  background-color: skyblue;
+  margin: 15px auto;
+  font-size: .7em;
+  font-family: 'Lato', 'Courier New', Courier, monospace;
+  padding: 5px;
+}
+
+div#epic-details > p {
+  margin: 5px;
+}
+
 body{
   height:100%;
   font-family: 'Lato', 'Courier New', Courier, monospace;

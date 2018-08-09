@@ -90,7 +90,7 @@ function getDiv(i, aboutmePos, portfolioPos) {
 }
 
 function loadingDialog() {
-  $('#loading-dialog').addClass('bounce').css('display','table');
+  $('#loading-dialog').addClass('bounce').css('display', 'table');
   //determine how many links
   ///will fit on pg w/o scrolling
   let dh = $('#loading-dialog').outerHeight(true) + $('#icons').outerHeight(true);
@@ -111,7 +111,7 @@ function loadingDialog() {
     } while (aboutMePos == portfolioPos)
   }
 
-  
+
   do {
     let div = getDiv(i, aboutMePos, portfolioPos);
 
@@ -123,11 +123,25 @@ function loadingDialog() {
     i++;
   } while (i < whByDh);
 
-  setTimeout(function(){
+  setTimeout(function () {
     $('#loading-container').append(`<div id="signature" class="cent">~ <a id="hire-me" href="mailto:tommyn.gre@gmail.com"><b>HIRE </b><i class="fas fa-mouse-pointer"></i></a> TOMMY GREENFIELD ~</div>`);
-  },1000);
+  }, 1000);
 
 }
+
+$(document).on('click', '#show-epic-details', function () {
+  console.log('clicked');
+  if ($('#epic-details').css('display') === 'none') {
+    $('#epic-details').css('display', 'block').removeClass('bounceOutRight').addClass('bounceInLeft')
+    $('#show-epic-details').text("( less )")
+  } else {
+    $('#epic-details').removeClass('bounceInLeft').addClass('bounceOutRight')
+    $('#show-epic-details').text("( more )")
+    setTimeout(function () {
+      $('#epic-details').css('display', 'none')
+    }, 850)
+  }
+})
 
 function getSectionContent(section) {
   let html = '';
@@ -138,9 +152,13 @@ function getSectionContent(section) {
       <ul class="sm-txt">
         <li>Grew up in Chicago suburbs</li>
         <li>Undergraduate at UW Madison</li>
-        <li>5+ years as QA and <b>Technical Support Engineer</b> at <a class="underline-link" href="https://www.epic.com/" style="color:${assignRandomColor()}"><b>Epic</b></a>, a healthcare software vendor in Verona, Wisconsin</li>
+        <li>5+ years as QA and <b>Technical Support Engineer</b> at <a class="underline-link" href="https://www.epic.com/" style="color:${assignRandomColor()}"><b>Epic</b></a>, an enterprise healthcare software vendor in Verona, Wisconsin </br> <a id="show-epic-details">( more )</a></li>
+          <div id="epic-details" class="animated">
+            <p>MyChart is a patient portal which integrates with Epic's clinical applications.</p>
+            <p>Primarily, I worked on tools to assess patient-reported clinical outcomes (e.g. patient-entered questionnaires, provider-facing reports), but I'm very familiar with most modules.</p>
+          </div>        
         <li>Since Feb 2017, working as an <b>EDA Analyst</b> at <a class="underline-link" href="https://www.labcorp.com/" style="color:${assignRandomColor()}"><b>LabCorp</b></a>, a clinical laboratory network headquartered in Burlington, North Carolina</li>
-        <li>Feb-Aug 2018, 24 week <b>full stack web dev</b> program through Trilogy Education Services and UNC Chapel Hill
+        <li>Feb-Aug 2018, 24 week <b>full stack web dev</b> program through UNC Chapel Hill and Trilogy Education Services 
       </ul> 
       `
       return html;
@@ -148,7 +166,7 @@ function getSectionContent(section) {
 
     case "#PORTFOLIO":
       portfolio.forEach(project => {
-        
+
         html += `
         <div class="sm-txt t-card">
           
@@ -198,9 +216,9 @@ function loadSection(section) {
     .addClass('animatedFast fadeInDown')
 
   //remove fadeIn after delay, so can be reactivated
-  setTimeout(function(){
+  setTimeout(function () {
     $("#section-wrap").removeClass('fadeInDown');
-  },500);
+  }, 500);
 
   $("#loading-container")
     .addClass('animatedFast fadeInDown')
@@ -221,7 +239,7 @@ function toLeft(section) {
 
     $('#loading-container').addClass('col s12 m6 l4')
       .append($('#icons-wrapper'))
-      .append($('#signature').addClass('signature-sm').css('margin-top','30px'));
+      .append($('#signature').addClass('signature-sm').css('margin-top', '30px'));
     loadSection(section);
 
   }, 200);
