@@ -152,10 +152,11 @@ function getSectionContent(section) {
       <ul class="sm-txt">
         <li>Grew up in Chicago suburbs</li>
         <li>Undergraduate at UW Madison</li>
-        <li>5+ years as QA and <b>Technical Support Engineer</b> at <a class="underline-link" href="https://www.epic.com/" style="color:${assignRandomColor()}"><b>Epic</b></a>, an enterprise healthcare software vendor in Verona, Wisconsin </br> <a id="show-epic-details">( more )</a></li>
+        <li>5+ years as <b>QA</b> and <b>Technical Support Engineer</b> at <a class="underline-link" href="https://www.epic.com/" style="color:${assignRandomColor()}"><b>Epic</b></a>, an enterprise healthcare software vendor in Verona, Wisconsin </br> <a id="show-epic-details">( more )</a></li>
           <div id="epic-details" class="animated">
-            <p>MyChart is a patient portal which integrates with Epic's clinical applications.</p>
-            <p>Primarily, I worked on tools to assess patient-reported clinical outcomes (e.g. patient-entered questionnaires, provider-facing reports), but I'm very familiar with most modules.</p>
+            <p>MyChart is Epic's web and mobile application for patients.</p>
+            <p>Primarily, I worked on tools which measure patient-reported clinical outcomes: questionnaire tools in MyChart, and data analysis tools in EpicCare (e.g. LPG/LRP, synopsis, smartforms, review flowsheets, doc flowsheets).</p> 
+            <p>(But I'm very familiar with most other modules <i class="far fa-smile-beam"></i>)</p>
           </div>        
         <li>Since Feb 2017, working as an <b>EDA Analyst</b> at <a class="underline-link" href="https://www.labcorp.com/" style="color:${assignRandomColor()}"><b>LabCorp</b></a>, a clinical laboratory network headquartered in Burlington, North Carolina</li>
         <li>Feb-Aug 2018, 24 week <b>full stack web dev</b> program through UNC Chapel Hill and Trilogy Education Services 
