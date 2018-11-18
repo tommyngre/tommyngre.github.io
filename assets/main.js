@@ -6,6 +6,12 @@ let portfolio = [
     image: './gallery/Trivia.png',
   },
   {
+    name: '"corporateagendainabox"',
+    description: "A product page for an aspiring subscription wellness box business, built with html/css/jquery.",
+    url: 'https://corporateagendainabox.github.io/',
+    image: './gallery/corporateagendainabox.png',
+  },
+  {
     name: 'My Reading List',
     description: "A full stack app built with node, express, handlebars, which reads and writes entries to a JawsDB.",
     url: 'https://blooming-beyond-98044.herokuapp.com/',
