@@ -1,25 +1,6 @@
-
 #tommy{
   text-align: center;
   display:block;
-}
-
-#show-epic-details{
-  font-size: .7em;
-}
-
-#epic-details{
-  display: none;
-  width: 80%;
-  background-color: skyblue;
-  margin: 15px auto;
-  font-size: .7em;
-  font-family: 'Lato', 'Courier New', Courier, monospace;
-  padding: 5px;
-}
-
-div#epic-details > p {
-  margin: 10px 5px;
 }
 
 body{
@@ -49,6 +30,7 @@ b {
   font-weight: 400
 }
 
+/* section title e.g. About, Portfolio */
 #sec-title{
   text-align:center;
 }
@@ -60,14 +42,13 @@ p{
   -webkit-margin-after: 0;
 }
 
-.cent{
+.display-table{
   display:table;
-  margin: 5px auto;
 }
 
 .load-section:hover{
-  transform: perspective(600) rotateY(-12deg);
-  -webkit-transform: perspective(600) rotateY(-12deg);
+  transform: perspective(600) rotateY(-6deg);
+  -webkit-transform: perspective(600) rotateY(-6deg);
   opacity: .9;
 }
 
@@ -118,6 +99,7 @@ p{
 .t-card-title{
   text-decoration: underline;
   font-weight: bold;
+  padding-bottom: 15px;
 }
 
 .row .t-card-pad{
@@ -134,20 +116,20 @@ p{
 }
 
 .proj-pic{
-  height:200px;
+  height:165px;
   margin:0 auto;
-  padding:10px;
-  box-shadow: 1px 1px 15px 0px #888888;
+  padding:20px;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.2);
 }
 .proj-pic:hover{
-  transform: perspective(600) rotateY(-12deg);
-  -webkit-transform: perspective(600) rotateY(-12deg);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  transform: perspective(300) rotateY(-3deg);
+  -webkit-transform: perspective(300) rotateY(-3deg);
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 1px 12px 0 rgba(0, 0, 0, 0.1);
 }
 
 .animatedFast {
-  -webkit-animation-duration: .5s;
-  animation-duration: .5s;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -165,17 +147,25 @@ ul:not(.browser-default)>li{
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
 }
-
 ul{
   margin:0 10px;
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
 }
-
 li{
-  display:list-item;
-  list-style-type: square;
   margin-left: 25px;
+  padding-bottom:15px;
+}
+
+.plain-link {
+  color:black;
+}
+.plain-link:hover {
+  display:inline-block;
+  text-decoration:underline;
+  opacity:.9;
+  transform: perspective(300) rotateY(-3deg);
+  -webkit-transform: perspective(300) rotateY(-3deg);
 }
 
 @media screen and (max-width: 1200px) {

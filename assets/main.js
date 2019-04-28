@@ -1,3 +1,5 @@
+var scene = document.getElementById('loading-container');
+
 let portfolio = [
   {
     name: 'Toger Trivia',
@@ -6,28 +8,28 @@ let portfolio = [
     image: './gallery/Trivia.png',
   },
   {
-    name: '"corporateagendainabox"',
+    name: 'Legendary One-Up',
+    description: "A tongue-in-cheek fighting game inspired by the oneupsmanship of co-workers.",
+    url: 'https://tommyngre.github.io/week-4-game/',
+    image: './gallery/RPG.png',
+  },
+  {
+    name: 'My Reading List',
+    description: "A full stack 'to-do'-type app built with node, express, handlebars, which reads and writes entries to a JawsDB.",
+    url: 'https://blooming-beyond-98044.herokuapp.com/',
+    image: './gallery/reading.png',
+  },
+  {
+    name: '"Corporate Agenda In A Box"',
     description: "A product page for an aspiring subscription wellness box business, built with html/css/jquery.",
     url: 'https://corporateagendainabox.github.io/',
     image: './gallery/corporateagendainabox.png',
   },
   {
-    name: 'My Reading List',
-    description: "A full stack app built with node, express, handlebars, which reads and writes entries to a JawsDB.",
-    url: 'https://blooming-beyond-98044.herokuapp.com/',
-    image: './gallery/reading.png',
-  },
-  {
     name: 'Ultimate Match Survey',
-    description: "A survey app built with node and express, which compares users' responses in order to find a 'match.'",
+    description: "A survey app built with node and express, which compares a user's responses to a survey with other users in the database, in order to find a 'match.'",
     url: 'https://powerful-brushlands-13053.herokuapp.com',
     image: './gallery/survey.png',
-  },
-  {
-    name: 'Legendary One-Up',
-    description: "A tongue-in-cheek 'fighting game' inspired by the oneupsmanship of co-workers.",
-    url: 'https://tommyngre.github.io/week-4-game/',
-    image: './gallery/RPG.png',
   },
   {
     name: "Giphy Search",
@@ -42,7 +44,7 @@ let portfolio = [
     image: './gallery/hangman.png',
   },
   {
-    name: "listen hear",
+    name: "Listen Hear",
     description: "a local music & dining app. spotify users can enter a zip, then preview nearby music acts performing that night. ",
     url: 'https://tommyngre.github.io/listen-hear/',
     image: './gallery/listenhear.png',
@@ -74,23 +76,23 @@ function getDots(whichLink) {
 function buildLink(whichLink) {
   let dots = getDots(whichLink);
   let col = assignRandomColor();
-  let html = `<span id="${whichLink}" data-name="${whichLink}" class="cent load-section" style="color:${assignRandomColor()}">&lt;${whichLink}${dots}&gt;</span>`
+  let html = `<span id="${whichLink}" data-name="${whichLink}" class="display-table load-section" style="color:${assignRandomColor()}">&lt;${whichLink}${dots}&gt;</span>`
   return html;
 }
 
 function getDiv(i, aboutmePos, portfolioPos) {
-  let div = $('<div class="cent row animated bounce">')
+  let div = $('<div data-depth="0.5" class="display-table row animated bounce">')
   if (i == aboutmePos) {
     let html = buildLink("ABOUT");
-    $(div).addClass('somethin some-some').html(html);
+    $(div).html(html);
     return div;
   } else if (i == portfolioPos) {
     let html = buildLink("PORTFOLIO");
-    $(div).addClass('somethin some-some').html(html);
+    $(div).html(html);
     return div;
   } else {
     $(div).addClass('nuthin')
-      .html(`<span class="cent" style="color:${assignRandomColor()}">&lt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</span>`)
+      .html(`<span class="display-table" style="color:${assignRandomColor()}">&lt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</span>`)
   }
   return div;
 }
@@ -105,7 +107,8 @@ function loadingDialog() {
   let whByDh = 2; //Math.floor((wh - dh) / dh) - 1;
 
   let i = 0; //link position
-  let t = 300; //speed links are drawn
+  let t = 400; //speed links are drawn
+  let ti = t; // initial t
 
   let aboutMePos = Math.floor(Math.random() * whByDh);
   let portfolioPos = Math.floor(Math.random() * whByDh);
@@ -117,7 +120,6 @@ function loadingDialog() {
     } while (aboutMePos == portfolioPos)
   }
 
-
   do {
     let div = getDiv(i, aboutMePos, portfolioPos);
 
@@ -125,29 +127,15 @@ function loadingDialog() {
       $('#loading-container').append($(div).clone())
     }, t);
 
-    t = t + 400;
+    t = ti + t;
     i++;
   } while (i < whByDh);
 
   setTimeout(function () {
-    $('#loading-container').append(`<div id="signature" class="cent">~ <a id="hire-me" href="mailto:tommyn.gre@gmail.com"><b>HIRE </b><i class="fas fa-mouse-pointer"></i></a> TOMMY GREENFIELD ~</div>`);
-  }, 1000);
+    $('#loading-container').append(`<div id="signature" class="display-table row">~ <a id="hire-me" href="mailto:tommyn.gre@gmail.com"><b>HIRE </b><i class="fas fa-mouse-pointer"></i></a> TOMMY GREENFIELD ~</div>`);
+  }, (i+1)*ti);
 
 }
-
-$(document).on('click', '#show-epic-details', function () {
-  console.log('clicked');
-  if ($('#epic-details').css('display') === 'none') {
-    $('#epic-details').css('display', 'block').removeClass('bounceOutRight').addClass('bounceInLeft')
-    $('#show-epic-details').text("( less )")
-  } else {
-    $('#epic-details').removeClass('bounceInLeft').addClass('bounceOutRight')
-    $('#show-epic-details').text("( more )")
-    setTimeout(function () {
-      $('#epic-details').css('display', 'none')
-    }, 540)
-  }
-})
 
 function getSectionContent(section) {
   let html = '';
@@ -155,17 +143,14 @@ function getSectionContent(section) {
   switch (section) {
     case "#ABOUT":
       html += `
+      <div style="width:1px;color:white;padding-bottom:20px"></div>
       <ul class="sm-txt">
         <li>Grew up in Chicago suburbs</li>
         <li>Undergraduate at UW Madison</li>
-        <li>5+ years as <b>QA</b> and <b>Technical Support Engineer</b> at <a class="underline-link" href="https://www.epic.com/" style="color:${assignRandomColor()}"><b>Epic</b></a>, an enterprise healthcare software vendor in Verona, Wisconsin </br> <a id="show-epic-details">( more )</a></li>
-          <div id="epic-details" class="animated">
-            <p>MyChart is Epic's web and mobile application for patients.</p>
-            <p>Primarily, I worked on tools which measure patient-reported clinical outcomes: questionnaire tools in MyChart, and data analysis tools in EpicCare (e.g. LPG/LRP, synopsis, smartforms, review flowsheets, doc flowsheets).</p> 
-            <p>(But I'm very familiar with most other modules <i class="far fa-smile-beam"></i>)</p>
-          </div>        
-        <li>Since Feb 2017, working as an <b>EDA Analyst</b> at <a class="underline-link" href="https://www.labcorp.com/" style="color:${assignRandomColor()}"><b>LabCorp</b></a>, a clinical laboratory network headquartered in Burlington, North Carolina</li>
-        <li>Feb-Aug 2018, 24 week <b>full stack web dev</b> program through UNC Chapel Hill and Trilogy Education Services 
+        <li>5+ years as <b>QA and Technical Support Engineer</b> on the MyChart team at <a class="underline-link" href="https://www.epic.com/" style="color:${assignRandomColor()}"><b>Epic</b></a>, an enterprise healthcare software vendor in Verona, Wisconsin. (MyChart is Epic's web and mobile application for patients.)</br>
+        <li>Feb/2017 until Nov/2018 - <b>Senior EDA Analyst</b> at <a class="underline-link" href="https://www.labcorp.com/" style="color:${assignRandomColor()}"><b>LabCorp</b></a>, a clinical laboratory network headquartered in Burlington, North Carolina</li>
+        <li>Feb/2018 until Aug/2018 - <b>Full Stack Web Dev</b> program through UNC Chapel Hill and Trilogy Education Services 
+        <li>Since Dec/2019 - <b>Senior Application Analyst</b> at <a class="underline-link" href="https://www.dukehealth.org/" style="color:${assignRandomColor()}"><b>Duke</b></a> on its health system's <a class="underline-link" href="https://www.dukemychart.org/" style="color:${assignRandomColor()}"><b>MyChart</b></a> web and mobile application.
       </ul> 
       `
       return html;
@@ -181,7 +166,7 @@ function getSectionContent(section) {
           <div class="obscure"></div>
 
             <div class="col l12 xl8">
-            <p class="t-card-title center-align">${project.name}</p>  
+            <p class="t-card-title center-align"><a class="plain-link" target="_blank" href="${project.url}">${project.name}</a></p>  
             <p class="t-card-desc">${project.description}</p>
             </div>
           
@@ -208,8 +193,6 @@ function loadSection(section) {
   $('#section-wrap').html("");
   let sec = $('<div id="sec">')
     .css('color', 'black')
-  //.css('color', $(section).css('color'))
-  //.css('background-color', $(section).css('background-color'))
 
   let html = `
     <p id='sec-title'>${$(section).attr('data-name')}</p>
@@ -242,7 +225,7 @@ function toLeft(section) {
     $('.nuthin').remove();
     $('#tommy').remove();
 
-    $('.cent').css('margin', '5px auto');
+    $('.display-table').css('margin', '5px auto');
 
     $('#loading-container').addClass('col s12 m6 l4')
       .append($('#icons-wrapper'))
@@ -263,4 +246,9 @@ $(document.body).on('click', '#PORTFOLIO', function () {
 
 $(document).ready(function () {
   loadingDialog();
+  // var parallaxInstance = new Parallax(scene,{
+  //   invertX: false,
+  //   invertY: false,  
+  // });
+
 });
