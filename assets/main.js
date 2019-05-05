@@ -2,7 +2,7 @@ var bg = document.getElementById('bg');
 var scene = document.getElementById('wrap');
 // height of #wrap is 282px when rendered
 var clientHeight = window.innerHeight;
-var wrapOffset = .5 * (clientHeight - 282)
+var wrapOffset = .3 * (clientHeight - 282)
 var parallaxMain;
 
 let portfolio = [
