@@ -1,3 +1,4 @@
+var bg = document.getElementById('bg');
 var sideScene = document.getElementById('loading-container');
 var parallaxSection;
 
@@ -97,7 +98,10 @@ function loadSection(section) {
   $("#loading-container")
     .addClass('animatedFast fadeInDown')
 
-  adjustParallax();
+  if (window.innerWidth > 600) {
+    adjustParallax();
+  }
+
 }
 
 function toLeft(section) {
@@ -105,6 +109,7 @@ function toLeft(section) {
     .addClass('animatedFast fadeOutLeft');
 
   setTimeout(function () {
+    bg.style.marginTop = "0px";
     $('#loading-container').addClass('fadeInLeft');
 
     $('.nuthin').remove();
@@ -122,15 +127,19 @@ function toLeft(section) {
 }
 
 $(document.body).on('click', '#ABOUT', function () {
-  if (parallaxMain.enabled === true) {
-    parallaxMain.destroy();
+  if (typeof parallaxMain !== 'undefined') {
+    if (parallaxMain.enabled !== false) {
+      parallaxMain.destroy();
+    }
   }
   toLeft('#ABOUT');
 });
 
 $(document.body).on('click', '#PORTFOLIO', function () {
-  if (parallaxMain.enabled === true) {
-    parallaxMain.destroy();
+  if (typeof parallaxMain !== 'undefined') {
+    if (parallaxMain.enabled !== false) {
+      parallaxMain.destroy();
+    }
   }
   toLeft('#PORTFOLIO');
 });

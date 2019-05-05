@@ -1,4 +1,8 @@
+var bg = document.getElementById('bg');
 var scene = document.getElementById('wrap');
+// height of #wrap is 282px when rendered
+var clientHeight = window.innerHeight;
+var wrapOffset = .5 * (clientHeight - 282)
 var parallaxMain;
 
 let portfolio = [
@@ -64,37 +68,39 @@ function assignRandomColor() {
   return `rgba(${rgb[0]},${rgb[1]},${rgb[2]},1)`;
 }
 
-//this was more useful when font was monotype. now, eh.
+//this was more fun when font was monotype. now, eh.
 function getDots(whichLink) {
+  let dot = "&nbsp";
   let dots = "";
   let dotsNeeded = 12 - whichLink.length - 3;
   for (let i = 0; i < dotsNeeded; i++) {
-    dots = dots + "&nbsp;";
+    dots = dots + dot;
   }
   return `<span>${dots}</span>`;
 }
 
 function buildLink(whichLink) {
   let dots = getDots(whichLink);
-  let col = assignRandomColor();
   let html = `<span id="${whichLink}" data-name="${whichLink}" class="display-table load-section" style="color:${assignRandomColor()}">&lt;${whichLink}${dots}&gt;</span>`
   return html;
 }
 
 function getDiv(i, aboutmePos, portfolioPos) {
   let div = $('<div data-depth="0.2" class="display-table row animated bounce">')
-  if (i == aboutmePos) {
-    let html = buildLink("ABOUT");
-    $(div).html(html);
-    return div;
-  } else if (i == portfolioPos) {
-    let html = buildLink("PORTFOLIO");
-    $(div).html(html);
-    return div;
-  } else {
-    $(div).addClass('nuthin')
-      .html(`<span class="display-table" style="color:${assignRandomColor()}">&lt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</span>`)
+  let html;
+  switch (i) {
+    case aboutmePos:
+      html = buildLink("ABOUT");
+      break;
+    case portfolioPos:
+      html = buildLink("PORTFOLIO");
+      break;
+    default:
+      $(div).addClass('nuthin')
+      html = `<span class="display-table" style="color:${assignRandomColor()}">&lt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</span>`
+      break;
   }
+  $(div).html(html);
   return div;
 }
 
@@ -133,19 +139,28 @@ function loadingDialog() {
   } while (i < whByDh);
 
   setTimeout(function () {
-    $('#loading-container').append(`<div data-depth="0.2" id="signature" class="display-table row">~ <a id="hire-me" href="mailto:tommyn.gre@gmail.com"><b>HIRE </b><i class="fas fa-mouse-pointer"></i></a> TOMMY GREENFIELD ~</div>`);  
-  }, (i+1)*ti);
+    $('#loading-container').append(`<div data-depth="0.2" id="signature" class="display-table row">~ <a id="hire-me" href="mailto:tommyn.gre@gmail.com"><b>HIRE </b><i class="fas fa-mouse-pointer"></i></a> TOMMY GREENFIELD ~</div>`);
+  }, (i + 1) * ti);
+
+}
+
+function doParallaxMain() {
+  parallaxMain = new Parallax(scene, {
+    invertX: false,
+    invertY: false,
+  });
+  scene.style.pointerEvents = "auto";
 
 }
 
 $(document).ready(function () {
+  //vertical align
+  bg.style.marginTop = (wrapOffset > 0) ? wrapOffset + "px" : "0px";
+
   loadingDialog();
 
-  parallaxMain = new Parallax(scene,{
-    invertX: false,
-    invertY: false,  
-  });
-
-  scene.style.pointerEvents="auto";
+  if (window.innerWidth > 600) {
+    doParallaxMain()
+  }
 
 });
