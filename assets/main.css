@@ -3,6 +3,10 @@
   display:block;
 }
 
+a.bold{
+  font-weight: bold;
+}
+
 #wrap{
   width:90%;
   margin:0 auto;
@@ -18,6 +22,11 @@ body{
   font-size: 3rem;
   font-style: normal;
   font-weight: 900;
+}
+
+div.baby > div{
+  color:black;
+  padding-bottom:20px
 }
 
 b {

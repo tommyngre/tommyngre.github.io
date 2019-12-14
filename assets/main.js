@@ -25,12 +25,6 @@ let portfolio = [
     image: './gallery/reading.png',
   },
   {
-    name: '"Corporate Agenda In A Box"',
-    description: "A product page for an aspiring subscription wellness box business, built with html/css/jquery.",
-    url: 'https://corporateagendainabox.github.io/',
-    image: './gallery/corporateagendainabox.png',
-  },
-  {
     name: 'Ultimate Match Survey',
     description: "A survey app built with node and express, which compares a user's responses to a survey with other users in the database, in order to find a 'match.'",
     url: 'https://powerful-brushlands-13053.herokuapp.com',
@@ -47,12 +41,6 @@ let portfolio = [
     description: "An irreverant take on hangman, where correctly guessing 'who hangin?' wins the game.",
     url: 'https://tommyngre.github.io/Hangman-Game/',
     image: './gallery/hangman.png',
-  },
-  {
-    name: "Listen Hear",
-    description: "a local music & dining app. spotify users can enter a zip, then preview nearby music acts performing that night. ",
-    url: 'https://tommyngre.github.io/listen-hear/',
-    image: './gallery/listenhear.png',
   }
 ]
 
@@ -96,8 +84,10 @@ function getDiv(i, aboutmePos, portfolioPos) {
       html = buildLink("PORTFOLIO");
       break;
     default:
-      $(div).addClass('nuthin')
-      html = `<span class="display-table" style="color:${assignRandomColor()}">&lt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</span>`
+      //$(div).addClass('nuthin')
+      // html = `<span class="display-table" style="color:${assignRandomColor()}">&lt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</span>`
+      let dots = getDots("BABY!")
+      html = `<span id="baby" data-name="COMING SOON... BABY GREENFIELD" class="display-table load-section" "style="color:${assignRandomColor()}">&lt;BABY!${dots}&gt;</span>`
       break;
   }
   $(div).html(html);
@@ -111,7 +101,7 @@ function loadingDialog() {
   let dh = $('#loading-dialog').outerHeight(true) + $('#icons').outerHeight(true);
   let wh = window.innerHeight;
   let ww = window.innerWidth;
-  let whByDh = 2; //Math.floor((wh - dh) / dh) - 1;
+  let whByDh = 3; //Math.floor((wh - dh) / dh) - 1;
 
   let i = 0; //link position
   let t = 400; //speed links are drawn
