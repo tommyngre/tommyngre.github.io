@@ -33,58 +33,34 @@ function getSectionContent(section) {
               <div>
                 Wow, you really visited our page! Thank you!</div>
               <div>
-                Grace and I are really excited to be expecting our first (son!) in February!</div>
+                Grace and I are really excited to be expecting our second (son!) in October!</div>
               <div>
-                We're really fortunate to be in the position where we are not in great need of baby supplies - in part
-                because our families have been so generous already, and in another part because we try
-                to be minimalists (relativley
+                We're really fortunate to be in the position where we are not in great need of baby supplies - 
+                because our families and friends were so generous with Wylie, because Wylie will be so generous with his hand-me-downs,
+                and because we try to be minimalist consumers (relativley
                 <i class="far fa-laugh-wink"></i>).</div>
               <div>
-                Still, if you visited because you're wondering how you can help support and celebrate our little one,
+                Still, if you visited because you're wondering how you can help support and celebrate the little one,
                 here are some ideas:
               </div>
               <ul>
-                <li>
-                  We're registered at
-                  <a class="bold underline-link" href="https://www.BuyBuyBABY.com/" style="color:orangered;text-decoration: underline;text-decoration-color: navy">BuyBuyBABY</a> (but we know there's not much left on our registry anymore
-                  <i class="far fa-sad-cry"></i>)
-                  <br>
-                </li>
-                <li>
-                  <a class="bold underline-link" href="https://www.target.com/" style="font-family:Arial, Helvetica, sans-serif;color:red">target</a>,
-                  <a class="bold underline-link" href="https://www.walgreens.com/" style="font-family: Brush Script MT, Brush Script Std, cursive, sans-serif ;color:red">Walgreens</a>,
-                  <a class="bold underline-link" href="https://www.cvs.com/" style="font-family: Arial, Helvetica, sans-serif;color:red">CVS</a>,
-                  <a class="bold underline-link" href="https://www.amazon.com/" style="color:black;text-decoration: underline;text-decoration-color: orange">Amazon</a>,
-                  <a class="bold underline-link" href="https://www.walmart.com/" style="color:blue">Walmart</a><span style="color:yellow;text-decoration:unset;">*</span> gift cards. We know this isn't as much fun, but this will help with all of the practical
-                  items we'll need along the way - not least of which are
-                  <a class="bold underline-link" href="https://baby.lovetoknow.com/baby-care/how-many-diapers-does-baby-use-year"><b>7000 diapers</b></a>!
-                  <br>
-                </li>
-                <li>
-                  <b>For toys</b>, we are trying to steer clear of electronics - and many of you are aware
-                  the Greenfields are set for life with Cabbage Patch dolls
-                  <i class="far fa-grin-tongue-squint"></i>
-                </li>
-                <li>
-                  <b>For books</b>, we don't discriminate against used books (Tommy is a big booster of
-                  Chapel Hill Public Library's quarterly book sales!), and are most excited about "morality
-                  tales" like fables and fairy tales.
-                </li>
-                <li>
-                  <b>For clothes</b>, we don't discriminate against hand-me-downs, and we might have all
-                  we need for ages 0-3 months.
-                </li>
+              <li>
+              <b>For toys</b>, we are trying to steer clear of electronics - and many of you are aware
+              the Greenfields are set for life with Cabbage Patch dolls
+              <i class="far fa-grin-tongue-squint"></i>
+            </li>
+            <li>
+              <b>For books</b>, we don't discriminate against used books, if you have old favorites,
+              and are most excited about "morality tales" like fables and fairy tales - books that teach values.
+            </li>
+            <li>
+              <b>For clothes</b>, we are pretty set by way of Wylie!
+            </li>
               </ul>
               <div style="width:1px;color:white;padding-bottom:20px"></div>
     
               <div>
                 Thank you thank you thank you for thinking of us!
-              </div>
-              <div>
-                And because we (Tommy) are one of those fussy couples who are thinking about the environment, feel free
-                to use
-                <a target="_blank" class="bold underline-link" href="mailto:tommyn.gre@gmail.com;gefredrickson@gmail.com?subject=Baby Greenfield">email</a> in lieu of paper cards and forego wrapping paper (I know...
-                <i class="far fa-meh-rolling-eyes"></i>)!
               </div>
     
             </div>
