@@ -86,8 +86,8 @@ function getDiv(i, aboutmePos, portfolioPos) {
     default:
       //$(div).addClass('nuthin')
       // html = `<span class="display-table" style="color:${assignRandomColor()}">&lt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</span>`
-      let dots = getDots("BABY!")
-      html = `<span id="baby" data-name="COMING SOON... BABY GREENFIELD" class="display-table load-section" "style="color:${assignRandomColor()}">&lt;BABY!${dots}&gt;</span>`
+      let dots = getDots("BABY")
+      html = `<span id="baby" data-name="COMING SOON... BABY GREENFIELD #2" class="display-table load-section" "style="color:${assignRandomColor()}">&lt;BABY #2!${dots}&gt;</span>`
       break;
   }
   $(div).html(html);
