@@ -12,10 +12,11 @@ function getSectionContent(section) {
       <ul class="sm-txt">
         <li>Grew up in Chicago suburbs</li>
         <li>Undergraduate at UW-Madison</li>
-        <li>5+ years as <b>QA and Technical Support Engineer</b> on the MyChart team at <a class="underline-link" href="https://www.epic.com/" style="color:${assignRandomColor()}"><b>Epic</b></a>, an enterprise healthcare software vendor in Verona, Wisconsin. (MyChart is Epic's web and mobile application for patients.)</br>
-        <li>Feb/2017 until Nov/2018 - <b>Senior EDA Analyst</b> at <a class="underline-link" href="https://www.labcorp.com/" style="color:${assignRandomColor()}"><b>LabCorp</b></a>, a clinical laboratory network headquartered in Burlington, North Carolina</li>
-        <li>Feb/2018 until Aug/2018 - <b>Full Stack Web Dev</b> program through UNC Chapel Hill and Trilogy Education Services 
-        <li>Since Dec/2018 - <b>Senior Application Analyst</b> at <a class="underline-link" href="https://www.dukehealth.org/" style="color:${assignRandomColor()}"><b>Duke</b></a> on its health system's <a class="underline-link" href="https://www.dukemychart.org/" style="color:${assignRandomColor()}"><b>MyChart</b></a> web and mobile applications.
+        <li>Since Nov 2020, working as an <b>Epic/Cache developer</b> on revenue cycle applications at <span style="color:${assignRandomColor()}"><b>UPMC</b></span>.</li>
+        <li>Dec 2018-Nov 2020, <b>Senior Application Analyst/Solution Developer</b> at <a class="underline-link" href="https://www.dukehealth.org/" style="color:${assignRandomColor()}"><b>Duke</b></a>. Focused on <a class="underline-link" href="https://www.dukemychart.org/" style="color:${assignRandomColor()}"><b>MyChart</b></a> and optimizing <span style="color:${assignRandomColor()}"><b>Telehealth</b></span> across Epic applications.
+        <li>Feb 2018-Aug 2018, Completed <b>Full Stack Web Developer</b> program through UNC Chapel Hill and Trilogy Education Services
+        <li>Feb 2017-Nov 2018, <b>Senior EDA Analyst</b> at <a class="underline-link" href="https://www.labcorp.com/" style="color:${assignRandomColor()}"><b>LabCorp</b></a>, a clinical laboratory network. Focused on reverse reference orders and results interfaces.</li>
+        <li>Before that, 5+ years as <b>QA</b>/<b>Technical Support Engineer</b> on the MyChart team at <a class="underline-link" href="https://www.epic.com/" style="color:${assignRandomColor()}"><b>Epic</b></a>, an enterprise healthcare software vendor in Verona, Wisconsin.</br>
       </ul> 
       `
       return html;
