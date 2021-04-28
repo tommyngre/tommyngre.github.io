@@ -13,10 +13,10 @@ function getSectionContent(section) {
         <li>Grew up in Chicago suburbs</li>
         <li>Undergraduate at UW-Madison</li>
         <li>Since Nov 2020, working as an <b>Epic/Cache developer</b> on revenue cycle applications at <span style="color:${assignRandomColor()}"><b>UPMC</b></span>.</li>
-        <li>Dec 2018-Nov 2020, <b>Senior Application Analyst/Solution Developer</b> at <a class="underline-link" href="https://www.dukehealth.org/" style="color:${assignRandomColor()}"><b>Duke</b></a>. Focused on <a class="underline-link" href="https://www.dukemychart.org/" style="color:${assignRandomColor()}"><b>MyChart</b></a> and optimizing <span style="color:${assignRandomColor()}"><b>Telehealth</b></span> across Epic applications.
+        <li>Dec 2018-Nov 2020, <b>Senior Application Analyst</b> then <b>Solution Developer</b> at <a class="underline-link" href="https://www.dukehealth.org/" style="color:${assignRandomColor()}"><b>Duke</b></a>. Focused on <a class="underline-link" href="https://www.dukemychart.org/" style="color:${assignRandomColor()}"><b>MyChart</b></a> and optimizing <span style="color:${assignRandomColor()}"><b>Telehealth</b></span> across Epic applications.
         <li>Feb 2018-Aug 2018, Completed <b>Full Stack Web Developer</b> program through UNC Chapel Hill and Trilogy Education Services
         <li>Feb 2017-Nov 2018, <b>Senior EDA Analyst</b> at <a class="underline-link" href="https://www.labcorp.com/" style="color:${assignRandomColor()}"><b>LabCorp</b></a>, a clinical laboratory network. Focused on reverse reference orders and results interfaces.</li>
-        <li>Before that, 5+ years as <b>QA</b>/<b>Technical Support Engineer</b> on the MyChart team at <a class="underline-link" href="https://www.epic.com/" style="color:${assignRandomColor()}"><b>Epic</b></a>, an enterprise healthcare software vendor in Verona, Wisconsin.</br>
+        <li>Before that, 5+ years as <b>QA</b> then <b>Technical Support Engineer</b> on the MyChart team at <a class="underline-link" href="https://www.epic.com/" style="color:${assignRandomColor()}"><b>Epic</b></a>, an enterprise healthcare software vendor.</br>
       </ul> 
       `
       return html;
@@ -37,7 +37,7 @@ function getSectionContent(section) {
                 Grace and I are really excited to be expecting our second (son!) in October!</div>
               <div>
                 We're really fortunate to be in the position where we are not in great need of baby supplies - 
-                because our families and friends were so generous with Wylie, because Wylie will be so generous with his hand-me-downs,
+                because our families and friends were so generous with Wylie, because Wylie will be generous with hand-me-downs,
                 and because we try to be minimalist consumers (relativley
                 <i class="far fa-laugh-wink"></i>).</div>
               <div>
@@ -52,7 +52,7 @@ function getSectionContent(section) {
             </li>
             <li>
               <b>For books</b>, we don't discriminate against used books, if you have old favorites,
-              and are most excited about "morality tales" like fables and fairy tales - books that teach values.
+              and we are most excited about "morality tales" like fables and fairy tales - books that teach values.
             </li>
             <li>
               <b>For clothes</b>, we are pretty set by way of Wylie!
