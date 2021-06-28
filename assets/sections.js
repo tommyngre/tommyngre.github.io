@@ -10,13 +10,28 @@ function getSectionContent(section) {
       html += `
       <div style="width:1px;color:white;padding-bottom:20px"></div>
       <ul class="sm-txt">
-        <li>Grew up in Chicago suburbs</li>
+        <li>Grew up in the Chicago suburbs</li>
         <li>Undergraduate at UW-Madison</li>
-        <li>Since Nov 2020, working as an <b>Epic/Cache developer</b> on revenue cycle applications at <span style="color:${assignRandomColor()}"><b>UPMC</b></span>.</li>
-        <li>Dec 2018-Nov 2020, <b>Senior Application Analyst</b> then <b>Solution Developer</b> at <a class="underline-link" href="https://www.dukehealth.org/" style="color:${assignRandomColor()}"><b>Duke</b></a>. Focused on <a class="underline-link" href="https://www.dukemychart.org/" style="color:${assignRandomColor()}"><b>MyChart</b></a> and optimizing <span style="color:${assignRandomColor()}"><b>Telehealth</b></span> across Epic applications.
-        <li>Feb 2018-Aug 2018, Completed <b>Full Stack Web Developer</b> program through UNC Chapel Hill and Trilogy Education Services
-        <li>Feb 2017-Nov 2018, <b>Senior EDA Analyst</b> at <a class="underline-link" href="https://www.labcorp.com/" style="color:${assignRandomColor()}"><b>LabCorp</b></a>, a clinical laboratory network. Focused on reverse reference orders and results interfaces.</li>
-        <li>Before that, 5+ years as <b>QA</b> then <b>Technical Support Engineer</b> on the MyChart team at <a class="underline-link" href="https://www.epic.com/" style="color:${assignRandomColor()}"><b>Epic</b></a>, an enterprise healthcare software vendor.</br>
+        <li>Based in Durham, NC since 2016</li>
+        <li>Since November 2020, working as <b>Cache developer</b> on Epic rev cycle apps at <span style="color:${assignRandomColor()}"><b>UPMC</b></span>.</li>
+      
+      <li >Previously...
+      <ul class="sm-txt" style="list-style:none;margin-top:15px">
+        <li class="resume">December 2018-November 2020
+        <br>
+        <b>Senior Application Analyst</b>, then <b>Solution Developer</b>, at <a class="underline-link" href="https://www.dukehealth.org/" style="color:${assignRandomColor()}"><b>Duke</b></a>. Focus on <a class="underline-link" href="https://www.dukemychart.org/" style="color:${assignRandomColor()}"><b>MyChart</b></a> and optimizing <span style="color:${assignRandomColor()}"><b>Telehealth</b></span> across Epic apps.
+        
+        <li class="resume">February 2017-November 2018
+        <br>
+        <b>Senior EDA Analyst</b> at <a class="underline-link" href="https://www.labcorp.com/" style="color:${assignRandomColor()}"><b>LabCorp</b></a>, a clinical laboratory network. Focus on reverse reference orders and results interfaces.</li>
+        
+        <li class="resume">February 2018-August 2018
+        <br>
+        <b>Full Stack Web Developer</b> certification with UNC Chapel Hill and Trilogy Education Services
+        
+        <li class="resume">5+ years at <a class="underline-link" href="https://www.epic.com/" style="color:${assignRandomColor()}"><b>Epic</b></a>, an enterprise healthcare software vendor, first in <b>QA</b>, then as a <b>Technical Support Engineer</b>, on the MyChart team.</br>
+      </ul>
+      </li>
       </ul> 
       `
       return html;
@@ -37,11 +52,11 @@ function getSectionContent(section) {
                 Grace and I are really excited to be expecting our second (son!) in October!</div>
               <div>
                 We're really fortunate to be in the position where we are not in great need of baby supplies - 
-                because our families and friends were so generous with Wylie, because Wylie will be generous with hand-me-downs,
+                because our families and friends were so generous with Wylie, and Wylie will be generous with hand-me-downs,
                 and because we try to be minimalist consumers (relativley
                 <i class="far fa-laugh-wink"></i>).</div>
               <div>
-                Still, if you visited because you're wondering how you can help support and celebrate the little one,
+                Still, if you're wondering how you can help support and celebrate the little one,
                 here are some ideas:
               </div>
               <ul>
@@ -80,6 +95,9 @@ function getSectionContent(section) {
     break;
 
     case "#PORTFOLIO":
+      html=`<div style="width:1px;color:white;padding-bottom:20px"></div>  
+      <div class="sm-txt"><div class="sm-txt" style="margin-top: 0px;">(Oldies but goodies from a 2018 full stack web development certification course.)</div></div>`
+
       portfolio.forEach(project => {
 
         html += `
